@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+      // function createCard(header, tagline, color, excited){
+      //   // const style = {color: color}
+      //   return <div className="card" style={{color: color}}>
+      //     <h1>{header}</h1>
+      //     <h2>{tagline} {excited ? "!!!" : "..."}</h2>
+      //   </div>
+      // }
+
+      // ReactDOM.render(
+      //   <div>
+      //     {createCard("Welcome!", "This is React", "red", true)}
+      //     {createCard("Beefy!", "It's a steak", "blue", false)}
+      //   </div>
+      //   , 
+      //   document.getElementById('root')
+      // )
+
+      function Card(props){
+        return <div className="card">
+          <h1>{props.header}</h1>
+          <h2>{props.tagline}</h2>
+        </div>
+      }
+
+
+
+      ReactDOM.render(
+        <div className="container">
+          <Card 
+            header="Welcome" 
+            tagline="This is React" 
+            />
+          <Card 
+            header="Something" 
+            tagline="Something else" 
+            />
+        </div>
+        , 
+        document.getElementById('root')
+      )
+
+
+    </script>
+  </body>
+</html>
